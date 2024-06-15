@@ -1,14 +1,19 @@
 package METIER;
 import DAO.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 
-
+@Service("METIER")
 public class metierImpl implements metier {
-    dao d ;
 
-    public metierImpl() {
-    }
-    public metierImpl(dao d) {
+    private dao d ;
+
+//    public metierImpl() {
+//    }
+    public metierImpl(@Qualifier("DAO2") dao d) {
         this.d = d;
     }
 

@@ -1,5 +1,8 @@
 package DAO;
 
+import org.springframework.stereotype.Repository;
+
+@Repository("DAO2")
 public class daoImplV2 implements dao {
 
     @Override
