@@ -29,13 +29,21 @@ public class PresentationV2 {
             String metierClass = scanner.nextLine();
             Class cMetier = Class.forName(metierClass);
 
-//
+            ////le fait d'utiliser un constructeur sans parameter
+
             Constructor metierConstructor = cMetier.getConstructor();
             metier o2 = (metier) metierConstructor.newInstance();
 
+            //le fait d'utiliser un constructeur avec parameter
+//            Constructor metierConstructor = cMetier.getConstructor(dao.class);
+//            metier o2 = (metier) metierConstructor.newInstance(o1);
 
-            Method setDao=cMetier.getMethod("setD", dao.class ) ;
-            setDao.invoke(o2, o1);
+
+//----------------------------------------------------------------------------
+
+
+//            Method setDao=cMetier.getMethod("setD", dao.class ) ;
+//            setDao.invoke(o2, o1);
 
             // Appeler la méthode calcul et afficher le résultat
             System.out.println(o2.calcul(12));
