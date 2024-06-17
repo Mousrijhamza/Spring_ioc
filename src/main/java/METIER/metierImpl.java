@@ -11,9 +11,9 @@ public class metierImpl implements metier {
 
     private dao d ;
 
-//    public metierImpl() {
-//    }
-    public metierImpl(@Qualifier("DAO2") dao d) {
+    public metierImpl() {
+    }
+    public metierImpl(dao d) {
         this.d = d;
     }
 
